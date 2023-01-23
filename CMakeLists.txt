@@ -5,6 +5,8 @@
 cmake_minimum_required (VERSION 3.5)
 project(aklite)
 
+set(CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_STATIC_LIBRARY_SUFFIX})
+
 set(AKTUALIZR_DIR ${CMAKE_CURRENT_SOURCE_DIR}/aktualizr)
 set(AKLITE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(MAIN_TARGET_LIB aktualizr-lite_lib)

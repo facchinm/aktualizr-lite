@@ -1,4 +1,4 @@
 [submodule "aktualizr"]
 	path = aktualizr
-	url = https://github.com/foundriesio/aktualizr
-	branch = 2022.2+fio
+	url = https://github.com/facchinm/aktualizr
+	branch = static_build

@@ -15,7 +15,9 @@ add_test(test_aktualizr-lite
 set_tests_properties(test_aktualizr-lite PROPERTIES DEPENDS uptane-generator)
 set_tests_properties(test_aktualizr-lite PROPERTIES LABELS "aklite:aktualizr-lite")
 
-set(TEST_DEFS BOOST_LOG_DYN_LINK)
+set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+
+#set(TEST_DEFS BOOST_LOG_DYN_LINK)
 set(TEST_INCS
   ${AKLITE_DIR}/src/compose
   ${AKLITE_DIR}/src/

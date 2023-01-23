@@ -43,14 +43,14 @@ endif(BUILD_AKLITE_WITH_NERDCTL)
 
 add_executable(${TARGET_EXE} main.cc)
 add_library(${TARGET} OBJECT ${SRC})
-add_library(${TARGET_LIB} SHARED ${SRC} api.cc)
+add_library(${TARGET_LIB} STATIC ${SRC} api.cc)
 
 if(ALLOW_MANUAL_ROLLBACK)
   add_definitions(-DALLOW_MANUAL_ROLLBACK)
 endif(ALLOW_MANUAL_ROLLBACK)
 
-target_compile_definitions(${TARGET} PRIVATE BOOST_LOG_DYN_LINK)
-target_compile_definitions(${TARGET_EXE} PRIVATE BOOST_LOG_DYN_LINK)
+#target_compile_definitions(${TARGET} PRIVATE BOOST_LOG_DYN_LINK)
+#target_compile_definitions(${TARGET_EXE} PRIVATE BOOST_LOG_DYN_LINK)
 
 set(INCS
   ${AKLITE_DIR}/src/

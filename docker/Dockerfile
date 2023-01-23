@@ -96,6 +96,10 @@ RUN mkdir ostree && cd ostree && git init && git remote add origin https://githu
     --disable-man \
     --with-builtin-grub2-mkconfig \
     --with-curl --without-soup --prefix=/usr && \
+    CFLAGS="-static -Wno-error=missing-prototypes" ./configure --with-libarchive \
+    --disable-man \
+    --with-builtin-grub2-mkconfig \
+    --with-curl --without-soup --prefix=/usr && \
     make -j8  install
 
 # Install skopeo
